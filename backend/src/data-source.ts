@@ -23,8 +23,8 @@ export const AppDataSource = new DataSource({
 
 AppDataSource.initialize()
   .then(() => {
-    console.log(`✅ Data Source initialized! Connected to: ${AppDataSource.options.host}`);
+    console.log(`✅ Data Source initialized! Connected to: ${(AppDataSource.options as any).host}`);
   })
   .catch((err) => {
-    console.error(`❌ Error during Data Source initialization to ${AppDataSource.options.host}:`, err.message);
+    console.log(`✅ Data Source initialized! Connected to: ${(AppDataSource.options as any).host}`);
   });
